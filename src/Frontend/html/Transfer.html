@@ -15,6 +15,8 @@
     <!--add logo to tab-->
     <link rel="icon" href="../assets/images/open-logo.png" type="image/png" sizes="16x16">
 
+    <script src="src/Frontend/js/index.js"></script>
+
 </head>
 
 <body>
@@ -60,19 +62,32 @@
     <div class="form-popup" id="myForm">
         <form action="/action_page.php" class="form-container">
             <h1>Playlist Link</h1>
-            <input type="text" placeholder="Link" required>
-            <button type="submit" class="btn">Transfer</button>
+            <input type="text" id="link" placeholder="Link" required>
+            <button type="submit" id="transfer" class="btn">Transfer</button>
             <button type="submit" class="btn cancel" onclick="closeForm()">Cancel</button>
         </form>
     </div>
 
     <script>
+        function runPyScript() {
+            var link = document.getElementById("link").value;
+            var transfer = document.getElementById("transfer");
+            transfer.addEventListener("click", function() {
+                var spawn = require("child_process").spawn;
+                var process = spawn('python', ["src/Backend/Spotify_to_YouTube/run.py", link]);
+                process.stdout.on('data', function(data) {
+                    console.log(data.toString());
+                })
+            })
+        }
+
         function openForm() {
             document.getElementById("myForm").style.display = "block";
         }
 
         function closeForm() {
             document.getElementById("myForm").style.display = "none";
+            document.getElementById("link").value = "";
         }
     </script>
     <br><br><br><br>

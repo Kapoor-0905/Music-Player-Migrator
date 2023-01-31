@@ -21,11 +21,12 @@ def make_service():
     #         credentials.refresh(Request())
     #     else:
     #         print("fetching new tokens...")
+    global flow
+    flow = InstalledAppFlow.from_client_secrets_file("client_secrets.json",scopes=["https://www.googleapis.com/auth/youtube"] )
+    url = flow.authorization_url()
+    return url
 
-    flow = InstalledAppFlow.from_client_secrets_file("src/Backend/Spotify to YouTube/client_secrets.json",scopes=["https://www.googleapis.com/auth/youtube"] )
-
-    flow.run_local_server(port=8080, prompt='consent', authorization_prompt_message='')
-
+def ret_service():
     credentials = flow.credentials
 
         # with open("token.pickle","wb") as f:

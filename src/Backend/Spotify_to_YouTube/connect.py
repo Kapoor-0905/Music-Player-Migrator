@@ -19,9 +19,8 @@ def fetch_playlist_using_id(api, id):
 
     return playlist_item, name
 
-playlist_id = '3NXuDjnoyINmBPQDwC1Zl6'
+# playlist_id = '3NXuDjnoyINmBPQDwC1Zl6'
 
-api = connect(spotify_client_id, spotify_client_secret)
-playlist_items = fetch_playlist_using_id(api, playlist_id)
+# api = connect(spotify_client_id, spotify_client_secret)
+# playlist_items = fetch_playlist_using_id(api, playlist_id)
 
-print(json.dumps(playlist_items))
