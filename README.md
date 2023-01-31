@@ -22,7 +22,7 @@
 </p>
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/101355193/205437297-f70e5395-94a3-4eec-a0c5-b55ef55cdb5a.png" width=300px height=300px > </div>
+<img src="https://user-images.githubusercontent.com/101355193/214783239-5fc1cc7d-a61e-4651-b794-77143bb1ac3f.png" width=300px height=300px > </div>
 
 ## :star2: Project Description
 > A web app that allows you to migrate your playlists and liked songs from one platform to the other with ease. It could potentially be integrated with the open website. The backend will be on python using the api's of the various music apps.
@@ -53,6 +53,11 @@ id1([Start of Project]) --> id2([Project Briefing and divison]) --> id3([Listing
 id2([Project Briefing and divison]) --> id4([Creating frontend design]) --> id5([Approval of design]) --> id6([Completing Frontend]) --> id8([Integration of frontend-backend]) 
 
 ```
+## Project Screenshots
+<img src="https://user-images.githubusercontent.com/101355193/214355971-b187a212-7e73-4f17-9585-07ac2516ece7.png" width=60%>
+<div align=right>
+<img src="https://user-images.githubusercontent.com/101355193/214356479-d6f8ef86-2b55-45f5-8489-892ad65667a1.png" width=60%>
+</div>
 
 ### How to contribute ?
 
